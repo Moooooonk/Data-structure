@@ -10,8 +10,8 @@ class vector
 private:
     int* data;
     size_t used, space;
-    using iterator = int*;
 public:
+    using iterator = int*;
     vector():used(0), space(5), data(new int[5]){}
     vector(int size);
     ~vector();
@@ -114,8 +114,8 @@ typename vector::iterator vector::begin() { return data; }
 typename vector::iterator vector::end() { return data + used; }
 
 int main() {
-    vector<int> v(3);
-    vector<int>::iterator it;
+    vector v(3);
+    vector::iterator it;
 
     cout<<"size of v: "<<v.size()<<endl;
     cout<<"capacity of v: "<<v.capacity()<<endl;
